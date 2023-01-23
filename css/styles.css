@@ -1,0 +1,61 @@
+/* ***** Custom properties **** */
+:root{
+    /*== colors ***/
+    --blue: rgb(79, 125, 243);
+    --blue-light: rgb(194, 211, 255);
+    --blue-dark: rgb(21, 31, 41);
+    --red: rgb(255, 82, 99);
+    --gray: rgb(150, 150, 150);
+}
+
+/* ***** Reset **** */
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+*,
+*::before,
+*::after{
+    box-shadow: inherit;
+    margin: 0;
+    border: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* ***** Components **** */
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 4.8rem;
+    text-align: center;
+    line-height: 4.8rem;
+    font-size: 1.6rem;
+    color: var(--gray);
+}
+
+
+
+/* ***** Utilities **** */
+.container{
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden{
+    display: none;
+}
+
+/* ***** Site styles **** */
