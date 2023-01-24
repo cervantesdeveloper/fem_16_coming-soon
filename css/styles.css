@@ -114,7 +114,8 @@ h2{
     padding: 2.4rem;
 }
 
-input{
+input,
+.btn{
     height: 4rem;
     width: 100%;
     border-radius: 2rem;
@@ -131,11 +132,11 @@ input[type="email"]::placeholder{
     color: var(--blue-light);
 }
 
-/* input[type="email"]:invalid{
-    border: .5px solid var(--red);
-} */
+input[type="email"]:focus-visible{
+    outline: 1px solid var(--blue);
+}
 
-input[type="submit"]{
+.btn[type="submit"]{
     font-size: 1.1rem;
     font-weight: 700;
     color: white;
@@ -143,11 +144,10 @@ input[type="submit"]{
     background-color: var(--blue);
     cursor: pointer;
     box-shadow: 0 .5rem 1.5rem .5rem var(--blue-light);
-    transition: 
-        opacity .3s ease-in-out;
+    transition:  opacity .3s ease-in-out;
 }
 
-input[type="submit"]:hover{
+.btn[type="submit"]:hover{
     opacity: .9;
 }
 
@@ -215,6 +215,26 @@ input[type="submit"]:hover{
     color: var(--gray);
 }
 
+/* == form porcess ==*/
+.form__process{
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.form__process p{
+    color: var(--blue-light);
+    font-size: 8vw;
+    font-weight: 700;
+}
+
 @media (min-width: 768px) {
     body{
         padding: 3.8rem;
@@ -223,6 +243,10 @@ input[type="submit"]:hover{
     header.container{
         height: 2.4rem;
         margin: 4.8rem auto;
+    }
+
+    header.container img{
+        height: 2.4rem;
     }
 
     h2{
@@ -235,10 +259,11 @@ input[type="submit"]:hover{
         justify-content: space-between;
     }
 
-    input{
+    input,
+    .btn{
         height: 5.6rem;
         border-radius: 2.8rem;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin-bottom: 0;
     }
 
@@ -256,5 +281,9 @@ input[type="submit"]:hover{
         padding-left: 2.8rem;
         font-size: 1.2rem;
         text-align: left;
+    }
+
+    .form__process p{
+        font-size: 4vw;
     }
 }

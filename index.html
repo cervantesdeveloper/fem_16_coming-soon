@@ -28,23 +28,58 @@
     <h2 class="subheading">Subscribe and get notified</h2>
   </hgroup>
 
-  <form class="form container">
+  <form class="form container" novalidate>
     <div class="form__input-required">
-      <input type="email" name="email" title="Please provide a valid email address" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" tabindex="1" placeholder="Your email address...">
+      <input type="email" name="email" title="Please provide a valid email address" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" tabindex="1" placeholder="Your email address..." >
     </div>
 
-    <input class="btn btn-cta" type="submit" value="Notify Me">
-
-    <div class="form__process">
-      <div class="loader hidden">
-
-      </div>
-      <div class="form__response hidden">
-        <p>Thank you!</p>
-      </div>
-    </div>
-    
+    <button class="btn btn-cta" type="submit">Notify Me</button>
   </form>
+
+  <div class="form__process hidden">
+    <div class="loader">
+      <svg width="10vw" height="10vw" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" stroke="var(--blue-light)">
+        <g fill="none" fill-rule="evenodd" stroke-width="2">
+            <circle cx="22" cy="22" r="1">
+                <animate attributeName="r"
+                    begin="0s" dur="1.8s"
+                    values="1; 20"
+                    calcMode="spline"
+                    keyTimes="0; 1"
+                    keySplines="0.165, 0.84, 0.44, 1"
+                    repeatCount="indefinite" />
+                <animate attributeName="stroke-opacity"
+                    begin="0s" dur="1.8s"
+                    values="1; 0"
+                    calcMode="spline"
+                    keyTimes="0; 1"
+                    keySplines="0.3, 0.61, 0.355, 1"
+                    repeatCount="indefinite" />
+            </circle>
+            <circle cx="22" cy="22" r="1">
+                <animate attributeName="r"
+                    begin="-0.9s" dur="1.8s"
+                    values="1; 20"
+                    calcMode="spline"
+                    keyTimes="0; 1"
+                    keySplines="0.165, 0.84, 0.44, 1"
+                    repeatCount="indefinite" />
+                <animate attributeName="stroke-opacity"
+                    begin="-0.9s" dur="1.8s"
+                    values="1; 0"
+                    calcMode="spline"
+                    keyTimes="0; 1"
+                    keySplines="0.3, 0.61, 0.355, 1"
+                    repeatCount="indefinite" />
+            </circle>
+        </g>
+    </svg>
+    </div>
+
+    <div class="form__response hidden">
+      <p>Thank you! we have subscribed you</p>
+    </div>
+  </div>
 
   <div class="hero container">
     <img src="images/illustration-dashboard.png" alt="dashboard">

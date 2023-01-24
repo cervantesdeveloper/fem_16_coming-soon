@@ -27,6 +27,7 @@ function formValidation({form, input, loader, response}){
                 input.style = "border-color: var(--blue-light)";
             }, 3000)
         } else if (!regex.exec(input.value)){
+            $span.textContent = "Please provide a valid email address";
             input.style = "border-color: var(--red)";
             $span.classList.remove("hidden");
             $span.classList.add("form__error");
@@ -34,6 +35,20 @@ function formValidation({form, input, loader, response}){
                 $span.classList.add("hidden");
                 $span.classList.remove("form__error");
                 input.style = "border-color: var(--blue-light)";
+            }, 3000)
+        } else{
+            loader.parentNode.classList.remove("hidden");
+            loader.parentNode.style = "display: flex";
+            setTimeout(()=>{
+                loader.classList.add("hidden");
+                response.classList.remove("hidden");
+                setTimeout(()=>{
+                    loader.parentNode.classList.add("hidden");
+                    loader.parentNode.style = "display: none";
+                    loader.classList.remove("hidden");
+                    response.classList.add("hidden");
+                    form.reset();
+                }, 3000)
             }, 3000)
         }
     })
