@@ -6,6 +6,7 @@ function formValidation({form, input, loader, response}){
     $span.textContent = input.title;
     $span.classList.add("hidden");
     input.insertAdjacentElement("afterend", $span);
+    form.setAttribute("novalidate", "");
 
     
     
